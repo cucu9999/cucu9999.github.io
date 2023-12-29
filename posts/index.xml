@@ -13,10 +13,11 @@
       <link>https://cucu9999.github.io/posts/my-first-post/</link>
       <pubDate>Mon, 25 Dec 2023 17:28:35 +0800</pubDate>
       <guid>https://cucu9999.github.io/posts/my-first-post/</guid>
-      <description>hello
-this is a blog by cucu!
-yes!
-next, i will study a few time. and then i will play with you!</description>
+      <description>This is a blog by cucu!
+LLM &amp;amp; AI 中各种浮点精度理解（fp16，fp32，bf16，**，fp24，pxr24，ef32） 一个数的表达形式通常由三部分组成： 符号位(sign, 一般是一位) + 指数位(exponent, 位数越大动态范围越大) + 小数位(fraction, 位数越大精度越高) 因此：能表达的数据范围主要看 exponent, 精度主要看 fraction
+好的参考链接
+以下介绍几种浮点格式
+FP80 (1位符号 + 15位指数 + 64位小数) 范围： ~3.65e−4951 至~1.18e4932，精度约为18位有效数字。 用法： 该格式用于精度要求较高的科学计算(许多（但不是全部） C/C++ 编译器实现 long double 使用这种 80 位（10 字节）格式。) 不用于深度学习计算(深度学习框架通常不支持) FP64 (1位符号 + 11位指数 + 52位小数) 范围： ~2.23e-308 … ~1.80e308，具有完整的 15-17 位小数精度。 用法： 该格式用于精度要求较高的科学计算(在大多数 C/C++ 系统上表示 double 类型) 通常不用于深度学习计算(TensorFlow(tf.float64)/ PyTorch(torch.float64或torch.double)中受支持) notion:大多数 GPU ，尤其是包括 RTX 系列在内的游戏 GPU ，其FP64性能受到严重限制（通常是FP32性能的1/32，而不是1/2）。 FP32 (1位符号 + 8位指数 + 23位小数) 范围： ~1.</description>
     </item>
   </channel>
 </rss>

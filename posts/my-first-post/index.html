@@ -7,10 +7,11 @@
 <meta name="robots" content="index, follow">
 <title>My First Post | My New Hugo Site</title>
 <meta name="keywords" content="">
-<meta name="description" content="hello
-this is a blog by cucu!
-yes!
-next, i will study a few time. and then i will play with you!">
+<meta name="description" content="This is a blog by cucu!
+LLM &amp; AI 中各种浮点精度理解（fp16，fp32，bf16，**，fp24，pxr24，ef32） 一个数的表达形式通常由三部分组成： 符号位(sign, 一般是一位) &#43; 指数位(exponent, 位数越大动态范围越大) &#43; 小数位(fraction, 位数越大精度越高) 因此：能表达的数据范围主要看 exponent, 精度主要看 fraction
+好的参考链接
+以下介绍几种浮点格式
+FP80 (1位符号 &#43; 15位指数 &#43; 64位小数) 范围： ~3.65e−4951 至~1.18e4932，精度约为18位有效数字。 用法： 该格式用于精度要求较高的科学计算(许多（但不是全部） C/C&#43;&#43; 编译器实现 long double 使用这种 80 位（10 字节）格式。) 不用于深度学习计算(深度学习框架通常不支持) FP64 (1位符号 &#43; 11位指数 &#43; 52位小数) 范围： ~2.23e-308 … ~1.80e308，具有完整的 15-17 位小数精度。 用法： 该格式用于精度要求较高的科学计算(在大多数 C/C&#43;&#43; 系统上表示 double 类型) 通常不用于深度学习计算(TensorFlow(tf.float64)/ PyTorch(torch.float64或torch.double)中受支持) notion:大多数 GPU ，尤其是包括 RTX 系列在内的游戏 GPU ，其FP64性能受到严重限制（通常是FP32性能的1/32，而不是1/2）。 FP32 (1位符号 &#43; 8位指数 &#43; 23位小数) 范围： ~1.">
 <meta name="author" content="">
 <link rel="canonical" href="https://cucu9999.github.io/posts/my-first-post/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.e087fd1dc76e73a35ae6d7028ddc1ba41e0131e7f9b3a6e2d019a208e6d6c4b5.css" integrity="sha256-4If9Hcduc6Na5tcCjdwbpB4BMef5s6bi0BmiCObWxLU=" rel="preload stylesheet" as="style">
@@ -60,10 +61,11 @@ next, i will study a few time. and then i will play with you!">
 
     </style>
 </noscript><meta property="og:title" content="My First Post" />
-<meta property="og:description" content="hello
-this is a blog by cucu!
-yes!
-next, i will study a few time. and then i will play with you!" />
+<meta property="og:description" content="This is a blog by cucu!
+LLM &amp; AI 中各种浮点精度理解（fp16，fp32，bf16，**，fp24，pxr24，ef32） 一个数的表达形式通常由三部分组成： 符号位(sign, 一般是一位) &#43; 指数位(exponent, 位数越大动态范围越大) &#43; 小数位(fraction, 位数越大精度越高) 因此：能表达的数据范围主要看 exponent, 精度主要看 fraction
+好的参考链接
+以下介绍几种浮点格式
+FP80 (1位符号 &#43; 15位指数 &#43; 64位小数) 范围： ~3.65e−4951 至~1.18e4932，精度约为18位有效数字。 用法： 该格式用于精度要求较高的科学计算(许多（但不是全部） C/C&#43;&#43; 编译器实现 long double 使用这种 80 位（10 字节）格式。) 不用于深度学习计算(深度学习框架通常不支持) FP64 (1位符号 &#43; 11位指数 &#43; 52位小数) 范围： ~2.23e-308 … ~1.80e308，具有完整的 15-17 位小数精度。 用法： 该格式用于精度要求较高的科学计算(在大多数 C/C&#43;&#43; 系统上表示 double 类型) 通常不用于深度学习计算(TensorFlow(tf.float64)/ PyTorch(torch.float64或torch.double)中受支持) notion:大多数 GPU ，尤其是包括 RTX 系列在内的游戏 GPU ，其FP64性能受到严重限制（通常是FP32性能的1/32，而不是1/2）。 FP32 (1位符号 &#43; 8位指数 &#43; 23位小数) 范围： ~1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cucu9999.github.io/posts/my-first-post/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-12-25T17:28:35+08:00" />
@@ -71,10 +73,11 @@ next, i will study a few time. and then i will play with you!" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="My First Post"/>
-<meta name="twitter:description" content="hello
-this is a blog by cucu!
-yes!
-next, i will study a few time. and then i will play with you!"/>
+<meta name="twitter:description" content="This is a blog by cucu!
+LLM &amp; AI 中各种浮点精度理解（fp16，fp32，bf16，**，fp24，pxr24，ef32） 一个数的表达形式通常由三部分组成： 符号位(sign, 一般是一位) &#43; 指数位(exponent, 位数越大动态范围越大) &#43; 小数位(fraction, 位数越大精度越高) 因此：能表达的数据范围主要看 exponent, 精度主要看 fraction
+好的参考链接
+以下介绍几种浮点格式
+FP80 (1位符号 &#43; 15位指数 &#43; 64位小数) 范围： ~3.65e−4951 至~1.18e4932，精度约为18位有效数字。 用法： 该格式用于精度要求较高的科学计算(许多（但不是全部） C/C&#43;&#43; 编译器实现 long double 使用这种 80 位（10 字节）格式。) 不用于深度学习计算(深度学习框架通常不支持) FP64 (1位符号 &#43; 11位指数 &#43; 52位小数) 范围： ~2.23e-308 … ~1.80e308，具有完整的 15-17 位小数精度。 用法： 该格式用于精度要求较高的科学计算(在大多数 C/C&#43;&#43; 系统上表示 double 类型) 通常不用于深度学习计算(TensorFlow(tf.float64)/ PyTorch(torch.float64或torch.double)中受支持) notion:大多数 GPU ，尤其是包括 RTX 系列在内的游戏 GPU ，其FP64性能受到严重限制（通常是FP32性能的1/32，而不是1/2）。 FP32 (1位符号 &#43; 8位指数 &#43; 23位小数) 范围： ~1."/>
 
 
 <script type="application/ld+json">
@@ -103,12 +106,12 @@ next, i will study a few time. and then i will play with you!"/>
   "@type": "BlogPosting",
   "headline": "My First Post",
   "name": "My First Post",
-  "description": "hello\nthis is a blog by cucu!\nyes!\nnext, i will study a few time. and then i will play with you!",
+  "description": "This is a blog by cucu!\nLLM \u0026amp; AI 中各种浮点精度理解（fp16，fp32，bf16，**，fp24，pxr24，ef32） 一个数的表达形式通常由三部分组成： 符号位(sign, 一般是一位) + 指数位(exponent, 位数越大动态范围越大) + 小数位(fraction, 位数越大精度越高) 因此：能表达的数据范围主要看 exponent, 精度主要看 fraction\n好的参考链接\n以下介绍几种浮点格式\nFP80 (1位符号 + 15位指数 + 64位小数) 范围： ~3.65e−4951 至~1.18e4932，精度约为18位有效数字。 用法： 该格式用于精度要求较高的科学计算(许多（但不是全部） C/C++ 编译器实现 long double 使用这种 80 位（10 字节）格式。) 不用于深度学习计算(深度学习框架通常不支持) FP64 (1位符号 + 11位指数 + 52位小数) 范围： ~2.23e-308 … ~1.80e308，具有完整的 15-17 位小数精度。 用法： 该格式用于精度要求较高的科学计算(在大多数 C/C++ 系统上表示 double 类型) 通常不用于深度学习计算(TensorFlow(tf.float64)/ PyTorch(torch.float64或torch.double)中受支持) notion:大多数 GPU ，尤其是包括 RTX 系列在内的游戏 GPU ，其FP64性能受到严重限制（通常是FP32性能的1/32，而不是1/2）。 FP32 (1位符号 + 8位指数 + 23位小数) 范围： ~1.",
   "keywords": [
     
   ],
-  "articleBody": "hello\nthis is a blog by cucu!\nyes!\nnext, i will study a few time. and then i will play with you!\n",
-  "wordCount" : "22",
+  "articleBody": "This is a blog by cucu!\nLLM \u0026 AI 中各种浮点精度理解（fp16，fp32，bf16，**，fp24，pxr24，ef32） 一个数的表达形式通常由三部分组成： 符号位(sign, 一般是一位) + 指数位(exponent, 位数越大动态范围越大) + 小数位(fraction, 位数越大精度越高) 因此：能表达的数据范围主要看 exponent, 精度主要看 fraction\n好的参考链接\n以下介绍几种浮点格式\nFP80 (1位符号 + 15位指数 + 64位小数) 范围： ~3.65e−4951 至~1.18e4932，精度约为18位有效数字。 用法： 该格式用于精度要求较高的科学计算(许多（但不是全部） C/C++ 编译器实现 long double 使用这种 80 位（10 字节）格式。) 不用于深度学习计算(深度学习框架通常不支持) FP64 (1位符号 + 11位指数 + 52位小数) 范围： ~2.23e-308 … ~1.80e308，具有完整的 15-17 位小数精度。 用法： 该格式用于精度要求较高的科学计算(在大多数 C/C++ 系统上表示 double 类型) 通常不用于深度学习计算(TensorFlow(tf.float64)/ PyTorch(torch.float64或torch.double)中受支持) notion:大多数 GPU ，尤其是包括 RTX 系列在内的游戏 GPU ，其FP64性能受到严重限制（通常是FP32性能的1/32，而不是1/2）。 FP32 (1位符号 + 8位指数 + 23位小数) 范围： ~1.18e-38 … ~3.40e38，精度为 6-9 位有效小数。 用法： 长期以来神经网络计算的标准类型。神经网络中的权重、激活和其他值长期以来默认以FP32表示(TensorFlow(tf.float32)/PyTorch(torch.float32 or torch.float)中受支持) 对于许多科学计算（尤其是迭代计算）来说，精度不够，导致误差累积(在大多数 C/C++ 系统上表示 float 类型。) FP16(1位符号 + 5位指数 + 10位小数) 范围： ~5.96e−8 (6.10e−5) … 65504，精度为 4 位有效十进制数字。 用法： 深度学习有使用 FP16 而不是 FP32 的趋势，因为较低精度的计算对于神经网络来说似乎并不重要。额外的精度没有任何作用，同时速度较慢，需要更多内存并降低通信速度。 可用于训练，通常使用混合精度训练(TensorFlow / PyTorch) BFLOAT16(1位符号 + 8位指数 + 7位小数) bfloat16 格式是截断的 IEEE 754 FP32 范围： ~1.18e-38 … ~3.40e38，具有 3 位有效小数位。 用法： 现在似乎正在取代FP16。与FP16（通常需要通过损失缩放等技术进行特殊处理）不同，BF16在训练和运行深度神经网络时几乎可以直接替代FP32(在TensorFlow(tf.bfloat16)/ PyTorch(torch.bfloat16)中受支持) int8 \u0026 int4 主要针对深度学习中的大模型训练部署的量化操作理解，图像等详细可参考链接 量化过程： 在进行权重量化时，首先将权重转换为整数表示，此外还要引入一个缩放因子，用于调整量化后的权重范围。这个缩放因子通常是一个浮点数，用于将原始的浮点数权重映射到量化后的整数范围内。这样，即使量化后的权重在整数表示下，通过乘以缩放因子，模型仍然可以获得对应的原始权重值。 而int4和int8量化的区别，就是转换为证书表示的范围不同。映射整数区间的疏密程度不一样。\n",
+  "wordCount" : "140",
   "inLanguage": "en",
   "datePublished": "2023-12-25T17:28:35+08:00",
   "dateModified": "2023-12-25T17:28:35+08:00",
@@ -189,10 +192,68 @@ next, i will study a few time. and then i will play with you!"/>
 
 </div>
   </header> 
-  <div class="post-content"><p>hello</p>
-<p>this is a blog by cucu!</p>
-<p>yes!</p>
-<p>next, i will study a few time. and then i will play with you!</p>
+  <div class="post-content"><p>This is a blog by cucu!</p>
+<h1 id="llm--ai-中各种浮点精度理解fp16fp32bf16fp24pxr24ef32">LLM &amp; AI 中各种浮点精度理解（fp16，fp32，bf16，**，fp24，pxr24，ef32）<a hidden class="anchor" aria-hidden="true" href="#llm--ai-中各种浮点精度理解fp16fp32bf16fp24pxr24ef32">#</a></h1>
+<p>一个数的表达形式通常由三部分组成：
+符号位(sign, 一般是一位) + 指数位(exponent, 位数越大动态范围越大) + 小数位(fraction, 位数越大精度越高)
+因此：能表达的数据范围主要看 exponent, 精度主要看 fraction</p>
+<p>好的<a href="https://moocaholic.medium.com/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407">参考链接</a></p>
+<p>以下介绍几种浮点格式</p>
+<ol>
+<li>FP80 (1位符号 + 15位指数 + 64位小数)
+范围： ~3.65e−4951 至~1.18e4932，精度约为18位有效数字。
+用法：</li>
+</ol>
+<ul>
+<li>该格式用于精度要求较高的科学计算(许多（但不是全部） C/C++ 编译器实现 long double 使用这种 80 位（10 字节）格式。)</li>
+<li>不用于深度学习计算(深度学习框架通常不支持)</li>
+</ul>
+<ol start="2">
+<li>FP64 (1位符号 + 11位指数 + 52位小数)
+范围： ~2.23e-308 … ~1.80e308，具有完整的 15-17 位小数精度。
+用法：</li>
+</ol>
+<ul>
+<li>该格式用于精度要求较高的科学计算(在大多数 C/C++ 系统上表示 double 类型)</li>
+<li>通常不用于深度学习计算(TensorFlow(tf.float64)/ PyTorch(torch.float64或torch.double)中受支持)
+notion:大多数 GPU ，尤其是包括 RTX 系列在内的游戏 GPU ，其FP64性能受到严重限制（通常是FP32性能的1/32，而不是1/2）。</li>
+</ul>
+<ol start="3">
+<li>FP32 (1位符号 + 8位指数 + 23位小数)
+范围： ~1.18e-38 … ~3.40e38，精度为 6-9 位有效小数。
+用法：</li>
+</ol>
+<ul>
+<li>长期以来神经网络计算的标准类型。神经网络中的权重、激活和其他值长期以来默认以FP32表示(TensorFlow(tf.float32)/PyTorch(torch.float32 or torch.float)中受支持)</li>
+<li>对于许多科学计算（尤其是迭代计算）来说，精度不够，导致误差累积(在大多数 C/C++ 系统上表示 float 类型。)</li>
+</ul>
+<ol start="4">
+<li>FP16(1位符号 + 5位指数 + 10位小数)
+范围： ~5.96e−8 (6.10e−5) … 65504，精度为 4 位有效十进制数字。
+用法：</li>
+</ol>
+<ul>
+<li>深度学习有使用 FP16 而不是 FP32 的趋势，因为较低精度的计算对于神经网络来说似乎并不重要。额外的精度没有任何作用，同时速度较慢，需要更多内存并降低通信速度。</li>
+<li>可用于训练，通常使用混合精度训练(TensorFlow / PyTorch)</li>
+</ul>
+<ol start="5">
+<li>BFLOAT16(1位符号 + 8位指数 + 7位小数)
+bfloat16 格式是截断的 IEEE 754 FP32
+范围： ~1.18e-38 … ~3.40e38，具有 3 位有效小数位。
+用法：</li>
+</ol>
+<ul>
+<li>现在似乎正在取代FP16。与FP16（通常需要通过损失缩放等技术进行特殊处理）不同，BF16在训练和运行深度神经网络时几乎可以直接替代FP32(在TensorFlow(tf.bfloat16)/ PyTorch(torch.bfloat16)中受支持)</li>
+</ul>
+<ol start="6">
+<li>int8 &amp; int4</li>
+</ol>
+<blockquote>
+<p>主要针对深度学习中的大模型训练部署的量化操作理解，图像等详细可参考<a href="https://zhuanlan.zhihu.com/p/627436535">链接</a>
+量化过程：
+在进行权重量化时，首先将权重转换为整数表示，此外还要引入一个缩放因子，用于调整量化后的权重范围。这个缩放因子通常是一个浮点数，用于将原始的浮点数权重映射到量化后的整数范围内。这样，即使量化后的权重在整数表示下，通过乘以缩放因子，模型仍然可以获得对应的原始权重值。
+而int4和int8量化的区别，就是转换为证书表示的范围不同。映射整数区间的疏密程度不一样。</p>
+</blockquote>
 
 
   </div>
