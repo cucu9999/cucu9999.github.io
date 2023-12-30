@@ -10,16 +10,16 @@
 
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="https://cucu9999.github.io/">
+<link rel="canonical" href="https://example.org/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.e087fd1dc76e73a35ae6d7028ddc1ba41e0131e7f9b3a6e2d019a208e6d6c4b5.css" integrity="sha256-4If9Hcduc6Na5tcCjdwbpB4BMef5s6bi0BmiCObWxLU=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://cucu9999.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://cucu9999.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cucu9999.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://cucu9999.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://cucu9999.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="https://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://example.org/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://cucu9999.github.io/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://example.org/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,7 +59,7 @@
 </noscript><meta property="og:title" content="My New Hugo Site" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://cucu9999.github.io/" />
+<meta property="og:url" content="https://example.org/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="My New Hugo Site"/>
@@ -70,9 +70,9 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "My New Hugo Site",
-  "url": "https://cucu9999.github.io/",
+  "url": "https://example.org/",
   "description": "",
-  "thumbnailUrl": "https://cucu9999.github.io/favicon.ico",
+  "thumbnailUrl": "https://example.org/favicon.ico",
   "sameAs": [
       
   ]
@@ -95,7 +95,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://cucu9999.github.io/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <a href="https://example.org/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -124,32 +124,10 @@
     </nav>
 </header>
 <main class="main"> 
-
-<article class="first-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">My First Post
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This is a blog by cucu!
-LLM &amp; AI 中各种浮点精度理解（fp16，fp32，bf16，**，fp24，pxr24，ef32） 一个数的表达形式通常由三部分组成： 符号位(sign, 一般是一位) &#43; 指数位(exponent, 位数越大动态范围越大) &#43; 小数位(fraction, 位数越大精度越高) 因此：能表达的数据范围主要看 exponent, 精度主要看 fraction
-好的参考链接
-以下介绍几种浮点格式
-FP80 (1位符号 &#43; 15位指数 &#43; 64位小数) 范围： ~3.65e−4951 至~1.18e4932，精度约为18位有效数字。 用法： 该格式用于精度要求较高的科学计算(许多（但不是全部） C/C&#43;&#43; 编译器实现 long double 使用这种 80 位（10 字节）格式。) 不用于深度学习计算(深度学习框架通常不支持) FP64 (1位符号 &#43; 11位指数 &#43; 52位小数) 范围： ~2.23e-308 … ~1.80e308，具有完整的 15-17 位小数精度。 用法： 该格式用于精度要求较高的科学计算(在大多数 C/C&#43;&#43; 系统上表示 double 类型) 通常不用于深度学习计算(TensorFlow(tf.float64)/ PyTorch(torch.float64或torch.double)中受支持) notion:大多数 GPU ，尤其是包括 RTX 系列在内的游戏 GPU ，其FP64性能受到严重限制（通常是FP32性能的1/32，而不是1/2）。 FP32 (1位符号 &#43; 8位指数 &#43; 23位小数) 范围： ~1....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-12-25 17:28:35 +0800 CST'>December 25, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to My First Post" href="https://cucu9999.github.io/posts/my-first-post/"></a>
-</article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://cucu9999.github.io/">My New Hugo Site</a></span>
+    <span>&copy; 2023 <a href="https://example.org/">My New Hugo Site</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
